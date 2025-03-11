@@ -1,0 +1,300 @@
+/* General */
+body {
+
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* la parte del header y su menu*/
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 25px;
+    border-radius: 1%;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu_principal {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.menu_principal a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5%;
+}
+
+.menu_principal a:hover {
+    background-color: #0056b3;
+}
+
+
+/* Contenedor principal */
+.main_container {
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+}
+
+
+/* Centro */
+.centro {
+    flex: 4;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.centro:hover {
+    background-color: #e4dbdb;
+}
+
+
+/* Aside */
+aside {
+    flex: 2;
+    background-color: #e8e8e8;
+    border-radius: 10px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer nav ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.paginas li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.paginas li a:hover {
+    color: #ffdd57;
+}
+
+
+/* ajustes del texto */
+.encabezado-principal {
+    font-size: 30px;
+    padding: 2%;
+}
+
+.encabezado-secundario {
+    font-size: 18px;
+    padding: 3%;
+}
+
+
+/* ajustes de las fotos */
+.img_portada {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*expandir*/
+    border-radius: 10px;
+}
+
+.foto {
+
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Estructura de tabla de pagina evidencia y teorias*/
+.tabla_evidencias {
+    width: 100%;
+}
+
+.celda_texto {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    width: 70%;
+}
+
+.celda_texto2 {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    width: 30%;
+}
+
+
+.celda_foto {
+    width: 100%;
+    background-color: #e8e8e8;
+    border-radius: 10px;
+}
+
+.celda_texto:hover,
+.celda_texto2:hover {
+    background-color: #e4dbdb;
+}
+
+/*formulario*/
+
+.caja_formulario {
+    padding: 8%;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.main_formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+}
+
+
+
+.boton {
+    background-color: #eaeedd;
+    padding: 0% 36%;
+    cursor: crosshair;
+}
+
+.boton:hover {
+    background-color: white;
+}
+
+.boton:active {
+    background-color: #6c7fd1;
+}
+
+/* ajustes de las tablas */
+.tabla_formulario td {
+    width: 50%;
+}
+
+.visible {
+    padding: 3%;
+
+}
+
+.visible td {
+    border: 2px solid black;
+}
+
+.visible tr td {
+    border: 1x solid black;
+    background-color: #ffffff;
+}
+
+
+
+
+/*cambios cuando cambie la pantalla */
+@media (max-width:1000px) {
+
+    .celda_texto,
+    .celda_texto2 {
+        width: 100%;
+        display: block;
+    }
+
+    .celda_foto {
+        width: 100%;
+        display: block;
+    }
+}
+
+@media (max-width: 700px) {
+    .menu_principal {
+        width: 100%;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .menu_principal a {
+        width: 100%;
+    }
+
+    aside {
+        display: none;
+    }
+
+    .encabezado-principal {
+        font-size: 20px;
+        padding: 2%;
+    }
+
+    .encabezado-secundario {
+        font-size: 14px;
+        padding: 4%;
+    }
+}
+
+/* animaciones de la pagina */
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+header,
+.centro,
+aside,
+footer,
+.celda_foto,
+.celda_texto,
+.celda_texto2,
+.caja_formulario {
+    opacity: 0;
+    animation: aparecer 1s forwards;
+}
+
+
+header {
+    animation-delay: 0s;
+}
+
+.centro,
+.celda_texto,
+.caja_formulario {
+    animation-delay: 1s;
+}
+
+aside,
+.celda_foto,
+.celda_texto2 {
+    animation-delay: 1.5s;
+}
+
+footer {
+    animation-delay: 2s;
+}
