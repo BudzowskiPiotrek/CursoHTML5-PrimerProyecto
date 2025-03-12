@@ -16,4 +16,4 @@ Opcionalmente:
 - Puede usarse bootstrap
 - Puede incluirse cualquier contenido multimedia o extra (un mapa por ejemplo), pero siempre que acompañe a la temática de la web. 
 
-Se valorará que el código esté bien indentado y comentado.
+Se valorará que el código esté bien indentado y comentado
